@@ -1,0 +1,12 @@
+{
+  "name": "Sali Agency",
+  "short_name": "Sali Agency",
+  "description": "Professional visa and legal services in Bali, Indonesia.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#e8ecf1",
+  "theme_color": "#CA8A04",
+  "orientation": "portrait-primary",
+  "icons": [],
+  "categories": ["business", "legal", "travel"]
+}
