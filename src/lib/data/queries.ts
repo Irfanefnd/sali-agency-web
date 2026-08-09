@@ -1,4 +1,4 @@
-import { createClient } from "@/lib/supabase/server";
+import { createPublicClient } from "@/lib/supabase/server-public";
 import { fallbackServices } from "@/lib/data/home-fallback";
 import type { ArticleRow, ServiceRow } from "@/lib/database.types";
 
@@ -9,7 +9,7 @@ const hasSupabase = Boolean(
 export async function getActiveServices(): Promise<ServiceRow[]> {
   if (!hasSupabase) return fallbackServices;
   try {
-    const supabase = await createClient();
+    const supabase = createPublicClient();
     const { data, error } = await supabase
       .from("services")
       .select("*")
@@ -25,7 +25,7 @@ export async function getActiveServices(): Promise<ServiceRow[]> {
 export async function getPublishedArticles(limit?: number): Promise<ArticleRow[]> {
   if (!hasSupabase) return [];
   try {
-    const supabase = await createClient();
+    const supabase = createPublicClient();
     let query = supabase
       .from("articles")
       .select("*")
@@ -43,7 +43,7 @@ export async function getPublishedArticles(limit?: number): Promise<ArticleRow[]
 export async function getArticleBySlug(slug: string): Promise<ArticleRow | null> {
   if (!hasSupabase) return null;
   try {
-    const supabase = await createClient();
+    const supabase = createPublicClient();
     const { data, error } = await supabase
       .from("articles")
       .select("*")
@@ -60,7 +60,7 @@ export async function getArticleBySlug(slug: string): Promise<ArticleRow | null>
 export async function getRelatedArticles(category: string | null, excludeSlug: string): Promise<ArticleRow[]> {
   if (!hasSupabase || !category) return [];
   try {
-    const supabase = await createClient();
+    const supabase = createPublicClient();
     const { data, error } = await supabase
       .from("articles")
       .select("*")
