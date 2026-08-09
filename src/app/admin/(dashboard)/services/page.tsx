@@ -2,6 +2,8 @@ import Link from "next/link";
 import { createClient } from "@/lib/supabase/server";
 import { saveService, deleteService } from "@/lib/actions/services";
 
+export const dynamic = "force-dynamic";
+
 const cardTypeBadge: Record<string, string> = {
   visa: "bg-ac-bg text-ac",
   legal: "bg-blue-100 text-blue-700",

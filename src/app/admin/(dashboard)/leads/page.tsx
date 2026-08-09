@@ -2,6 +2,8 @@ import Link from "next/link";
 import { createClient } from "@/lib/supabase/server";
 import { saveLead, deleteLead } from "@/lib/actions/leads";
 
+export const dynamic = "force-dynamic";
+
 const statuses = ["new", "contacted", "converted", "closed"] as const;
 const badge: Record<string, string> = {
   new: "bg-ac-bg text-ac",

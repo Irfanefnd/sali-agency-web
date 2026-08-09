@@ -3,6 +3,8 @@ import Link from "next/link";
 import { ImageOff } from "lucide-react";
 import { getPublishedArticles } from "@/lib/data/queries";
 
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: "Articles",
   description: "Guides, tips, and updates on Bali visas, immigration, and expat life from Sali Agency.",

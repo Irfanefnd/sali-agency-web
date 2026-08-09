@@ -4,6 +4,8 @@ import { LayoutDashboard, Users, UserRound, Briefcase, Newspaper, LogOut } from 
 import { createClient } from "@/lib/supabase/server";
 import { logout } from "@/lib/actions/auth";
 
+export const dynamic = "force-dynamic";
+
 const navItems = [
   { href: "/admin", label: "Dashboard", icon: LayoutDashboard },
   { href: "/admin/leads", label: "Leads", icon: Users },

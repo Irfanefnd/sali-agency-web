@@ -3,6 +3,8 @@ import { Briefcase, FileText, Sparkles } from "lucide-react";
 import { waLink } from "@/lib/site-config";
 import { getActiveServices, getPublishedArticles } from "@/lib/data/queries";
 
+export const dynamic = "force-dynamic";
+
 const overview = [
   {
     key: "legal",

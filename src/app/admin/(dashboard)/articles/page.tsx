@@ -3,6 +3,8 @@ import { ImageOff } from "lucide-react";
 import { createClient } from "@/lib/supabase/server";
 import { saveArticle, deleteArticle } from "@/lib/actions/articles";
 
+export const dynamic = "force-dynamic";
+
 const categories = ["Visa Tips", "Immigration", "Business", "Legal", "Lifestyle"];
 
 export default async function ArticlesAdminPage({

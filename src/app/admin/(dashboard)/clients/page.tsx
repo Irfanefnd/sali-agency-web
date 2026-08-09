@@ -2,6 +2,8 @@ import Link from "next/link";
 import { createClient } from "@/lib/supabase/server";
 import { saveApplication } from "@/lib/actions/applications";
 
+export const dynamic = "force-dynamic";
+
 const statuses = ["pending", "in_review", "approved", "rejected", "completed"] as const;
 const badge: Record<string, string> = {
   pending: "bg-bg2 text-tx3",

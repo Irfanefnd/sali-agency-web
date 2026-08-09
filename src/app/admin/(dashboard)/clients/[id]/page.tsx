@@ -4,6 +4,8 @@ import { ArrowLeft } from "lucide-react";
 import { createClient } from "@/lib/supabase/server";
 import { saveApplication, deleteApplication, addApplicationEvent, deleteApplicationEvent } from "@/lib/actions/applications";
 
+export const dynamic = "force-dynamic";
+
 const statuses = ["pending", "in_review", "approved", "rejected", "completed"] as const;
 const eventStatuses = ["pending", "in_progress", "completed"] as const;
 

@@ -6,6 +6,8 @@ import { getArticleBySlug, getRelatedArticles } from "@/lib/data/queries";
 import { siteConfig, waLink } from "@/lib/site-config";
 import { ShareButtons } from "@/components/ShareButtons";
 
+export const dynamic = "force-dynamic";
+
 export async function generateMetadata({
   params,
 }: {
